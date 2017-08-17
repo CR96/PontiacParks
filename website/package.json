@@ -1,0 +1,29 @@
+{
+  "name": "pontiacparks",
+  "version": "1.0.0",
+  "description": "Disability information, district borders, and data from selected parks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cr96/pontiacparks.git"
+  },
+  "keywords": [
+    "pontiac",
+    "park",
+    "accessibility",
+    "disability",
+    "ADA"
+  ],
+  "author": "Corey Rowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cr96/pontiacparks/issues"
+  },
+  "homepage": "https://github.com/cr96/pontiacparks#readme",
+  "dependencies": {
+    "material-components-web": "^0.17.0"
+  }
+}

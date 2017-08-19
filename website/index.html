@@ -4,6 +4,8 @@
 <head>
 	<title>Pontiac Parks: Improving Accessibility</title>
 	<link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<meta charset="utf-8">
@@ -15,7 +17,7 @@
 	.map-frame {
 		display: block;
 		width: 95vw;
-		height: 95vh;
+		height: 50vh;
 		max-width: 200%;
 		margin: 0;
 		padding: 0;
@@ -25,29 +27,157 @@
 </style>
 
 <body>
-	<div class="mdc-layout-grid">
-		<div class="mdc-layout-grid__inner">
-			<div class="mdc-layout-grid__cell" id="col1">
-				<h1 class="mdc-typography--title">Pontiac Parks: Improving Accessibility</h1>
-				<div class="mdc-typography--body2">Disability information, district borders, and data from selected parks.</div>
-				<h2 class="mdc-typography--subheading2">About this project</h2>
-				<div class="mdc-typography--body1">
-					<span>This project supplements research performed in the summer of 2017 as part of Health Science 405: Community Engaged Research Training, a course offered through the </span>
-					<a href="https://oakland.edu/shs" target="_blank" rel="noopener noreferrer">School of Health Sciences at Oakland University.</a>
-				</div>
-				<h2 class="mdc-typography--subheading2">Equipment used</h2>
-				<div class="mdc-typography--body1">
-					<span>Images and geolocation data for this project were collected with a </span>
-					<a href="https://buy.garmin.com/en-US/US/p/113548" target="_blank" rel="noopener noreferrer">Garmin Oregon 650t</a>
-					<span> and organized using </span>
-					<a href="https://google.com/earth/desktop" target="_blank" rel="noopener noreferrer">Google Earth Pro 7.3.</a>
+	<header class="mdc-toolbar mdc-toolbar--fixed">
+		<div class="mdc-toolbar__row">
+			<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+				<span class="mdc-toolbar__title">Pontiac Parks: Improving Accessibility</span>
+			</section>
+			<section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+				<a href="#" class="material-icons mdc-toolbar__icon" aria-label="Begin Presentation" alt="Begin Presentation">play_circle_outline</a>
+			</section>
+		</div>
+	</header>
+	<main>
+		<div class="mdc-toolbar-fixed-adjust">
+			<div class="mdc-layout-grid">
+				<div class="mdc-layout-grid__inner">
+					<div class="mdc-layout-grid__cell" id="map-col1">
+						<h2 class="mdc-typography--subheading2">About this project</h2>
+						<div class="mdc-typography--body1">
+							<span>This project supplements research performed in the summer of 2017 as part of Health Science 405: Community Engaged Research Training, a course offered through the </span>
+							<a href="https://oakland.edu/shs" target="_blank" rel="noopener noreferrer">School of Health Sciences at Oakland University.</a>
+						</div>
+						<h2 class="mdc-typography--subheading2">Equipment used</h2>
+						<div class="mdc-typography--body1">
+							<span>Images and geolocation data for this project were collected with a </span>
+							<a href="https://buy.garmin.com/en-US/US/p/113548" target="_blank" rel="noopener noreferrer">Garmin Oregon 650t</a>
+							<span> and organized using </span>
+							<a href="https://google.com/earth/desktop" target="_blank" rel="noopener noreferrer">Google Earth Pro 7.3.</a>
+						</div>
+
+					</div>
+					<div class="mdc-layout-grid__cell" id="map-col2">
+						<iframe class="map-frame" title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"></iframe>
+					</div>
 				</div>
 			</div>
-			<div class="mdc-layout-grid__cell" id="col2">
-				<iframe class="map-frame" title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"></iframe>
+			<div class="mdc-layout-grid">
+				<h2 class="mdc-typography--subheading2">Selected parks</h2>
+				<div class="mdc-layout-grid__inner">
+					<div class="mdc-layout-grid__cell" id="parks-col1">
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Fisher Street Park</h3>
+								<div class="mdc-card__subtitle">District 1</div>
+								<div class="mdc-card__subtitle">Mini Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Indian Village Park</h3>
+								<div class="mdc-card__subtitle">District 2</div>
+								<div class="mdc-card__subtitle">Mini Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Lakeside Park</h3>
+								<div class="mdc-card__subtitle">District 3</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">North Kiwanis Park</h3>
+								<div class="mdc-card__subtitle">District 3</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Cherrylawn Park</h3>
+								<div class="mdc-card__subtitle">District 4</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+					</div>
+					<div class="mdc-layout-grid__cell" id="parks-col2">
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Hawthorne Park</h3>
+								<div class="mdc-card__subtitle">District 4</div>
+								<div class="mdc-card__subtitle">Community Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Jaycee Park</h3>
+								<div class="mdc-card__subtitle">District 4</div>
+								<div class="mdc-card__subtitle">Community Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Galloway Lake Park</h3>
+								<div class="mdc-card__subtitle">District 5</div>
+								<div class="mdc-card__subtitle">Community Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Art Heaton Park</h3>
+								<div class="mdc-card__subtitle">District 6</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Madge Burt Park</h3>
+								<div class="mdc-card__subtitle">District 6</div>
+								<div class="mdc-card__subtitle">Mini Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+					</div>
+					<div class="mdc-layout-grid__cell" id="parks-col3">
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Charlie Harrison Park</h3>
+								<div class="mdc-card__subtitle">District 6</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">Murphy Park</h3>
+								<div class="mdc-card__subtitle">District 7</div>
+								<div class="mdc-card__subtitle">Community Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+						<div class="mdc-card__horizontal-block">
+							<section class="mdc-card__primary">
+								<h3 class="mdc-card__title mdc-card__title--large">South Kiwanis Park</h3>
+								<div class="mdc-card__subtitle">District 7</div>
+								<div class="mdc-card__subtitle">Neighborhood Park</div>
+							</section>
+							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 </body>
 
 </html>

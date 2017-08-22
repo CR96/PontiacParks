@@ -2,7 +2,7 @@
 <html class="mdc-typography" lang="en-US">
 
 <head>
-	<title>Pontiac Parks: Improving Accessibility</title>
+	<title>Pontiac Parks Accessibility Project</title>
 	<link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -16,15 +16,24 @@
 </head>
 
 <style>
-	.map-frame {
-		display: block;
-		width: 95vw;
-		height: 50vh;
-		max-width: 200%;
-		margin: 0;
-		padding: 0;
-		border: 0 none;
-		box-sizing: border-box;
+	:root {
+		/* TODO: Reference material colors properly */
+		/* Material Deep Orange 500 */
+		--mdc-theme-primary: #ff5722;
+
+		/* Material Blue Grey 900 */
+		--mdc-theme-secondary: #263238;
+
+		/* Center everything */
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -500px;
+	}
+
+	/* TODO: Set link text color properly */
+	.accent-link {
+		color: #263238;
 	}
 </style>
 
@@ -32,10 +41,11 @@
 	<header class="mdc-toolbar mdc-toolbar--fixed">
 		<div class="mdc-toolbar__row">
 			<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-				<span class="mdc-toolbar__title">Pontiac Parks: Improving Accessibility</span>
+				<span class="mdc-toolbar__title">Pontiac Parks Accessibility Project</span>
 			</section>
 			<section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-				<a href="#" class="material-icons mdc-toolbar__icon" aria-label="Begin Presentation" alt="Begin Presentation">play_circle_outline</a>
+				<a href="https://github.com/cr96/pontiacparks" class="material-icons mdc-toolbar__icon" aria-label="View this project on GitHub"
+				 alt="GitHub">code</a>
 			</section>
 		</div>
 	</header>
@@ -47,25 +57,32 @@
 						<h2 class="mdc-typography--subheading2">About this project</h2>
 						<div class="mdc-typography--body1">
 							<span>This project supplements research performed in the summer of 2017 as part of Health Science 405: Community Engaged Research Training, a course offered through the </span>
-							<a href="https://oakland.edu/shs" target="_blank" rel="noopener noreferrer">School of Health Sciences at Oakland University.</a>
+							<a class="accent-link" href="https://oakland.edu/shs" target="_blank" rel="noopener noreferrer">School of Health Sciences at Oakland University.</a>
 						</div>
 						<h2 class="mdc-typography--subheading2">Equipment used</h2>
 						<div class="mdc-typography--body1">
 							<span>Images and geolocation data for this project were collected with a </span>
-							<a href="https://buy.garmin.com/en-US/US/p/113548" target="_blank" rel="noopener noreferrer">Garmin Oregon 650t</a>
+							<a class="accent-link" href="https://buy.garmin.com/en-US/US/p/113548" target="_blank" rel="noopener noreferrer">Garmin Oregon 650t</a>
 							<span> and organized using </span>
-							<a href="https://google.com/earth/desktop" target="_blank" rel="noopener noreferrer">Google Earth Pro 7.3.</a>
+							<a class="accent-link" href="https://google.com/earth/desktop" target="_blank" rel="noopener noreferrer">Google Earth Pro 7.3.</a>
 						</div>
-						<a style="margin: 20px;" class="mdc-button mdc-button--primary mdc-button--raised" href="files/pontiacparks.kmz">Download .KMZ (393 MB)</a>
+						<a style="margin: 20px;" class="mdc-button mdc-button--primary mdc-button--raised" href="assets/map.kmz">Download .KMZ (393 MB)</a>
 					</div>
 					<div class="mdc-layout-grid__cell" id="map-col2">
-						<iframe class="map-frame" title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"></iframe>
+						<iframe title="Project Slideshow" src="https://docs.google.com/presentation/d/e/2PACX-1vSF_dBxAzVhdWzBL8hRhbNdjM0ZUWune_Ctk8c6dhKCDa2SkyKjw-ICOanReqRXkgDzvbzBuv9QgnYT/embed"
+						 frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					</div>
 				</div>
+			</div>
+			<div class="mdc-layout-grid__cell" id="map-col3">
+				<iframe title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"
+				 frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 			</div>
 			<div class="mdc-layout-grid">
 				<h2 class="mdc-typography--subheading2">Selected parks</h2>
 				<div class="mdc-layout-grid__inner">
+
 					<div class="mdc-layout-grid__cell" id="parks-col1">
 						<div class="mdc-card__horizontal-block">
 							<section class="mdc-card__primary">
@@ -107,8 +124,6 @@
 							</section>
 							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
 						</div>
-					</div>
-					<div class="mdc-layout-grid__cell" id="parks-col2">
 						<div class="mdc-card__horizontal-block">
 							<section class="mdc-card__primary">
 								<h3 class="mdc-card__title mdc-card__title--large">Jaycee Park</h3>
@@ -117,6 +132,8 @@
 							</section>
 							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
 						</div>
+					</div>
+					<div class="mdc-layout-grid__cell" id="parks-col2">
 						<div class="mdc-card__horizontal-block">
 							<section class="mdc-card__primary">
 								<h3 class="mdc-card__title mdc-card__title--large">Galloway Lake Park</h3>
@@ -141,8 +158,6 @@
 							</section>
 							<img class="mdc-card__media-item mdc-card__media-item--1x" src="assets/ic_place_black_48dp_2x.png" alt="">
 						</div>
-					</div>
-					<div class="mdc-layout-grid__cell" id="parks-col3">
 						<div class="mdc-card__horizontal-block">
 							<section class="mdc-card__primary">
 								<h3 class="mdc-card__title mdc-card__title--large">Charlie Harrison Park</h3>

@@ -36,13 +36,50 @@
 	.accent-link {
 		color: #263238;
 	}
+
+	/* Formatting on mobile */
+	@media (max-width: 839px) {
+
+		.title-font span {
+			display: none;
+		}
+
+		.title-font:after {
+			content: "Pontiac Parks";
+		}
+
+		.slides-frame {
+			width: 100%;
+		}
+
+		.map-frame {
+			width: 100%;
+		}
+	}
+
+	/* Formatting on desktop */
+	@media (min-width: 840px) {
+
+		.title-font span {
+			display: none;
+		}
+
+		.title-font:after {
+			content: "Pontiac Parks Accessibility Project";
+		}
+
+		.map-frame {
+			width: 75%;
+		}
+	}
 </style>
 
 <body>
 	<header class="mdc-toolbar mdc-toolbar--fixed">
 		<div class="mdc-toolbar__row">
 			<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-				<span class="mdc-toolbar__title">Pontiac Parks Accessibility Project</span>
+				<!-- Populated dynamically according to screen size -->
+				<span class="mdc-toolbar__title title-font" />
 			</section>
 			<section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
 				<a href="https://github.com/cr96/pontiacparks" target="_blank" rel="noopener noreferrer" class="material-icons mdc-toolbar__icon"
@@ -78,13 +115,13 @@
 					</div>
 					<div class="mdc-layout-grid__cell" id="map-col2">
 						<iframe title="Project Slideshow" src="https://docs.google.com/presentation/d/e/2PACX-1vRijw28owe4FAuMgqr2EP7LwBLW7f9lliQ0ID18KHS7GBD1Cv8gCcVTr4WMJSw4TxeaDpGIqYbQDDhv/embed"
-						 frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+						 class="slides-frame" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					</div>
 				</div>
 			</div>
 			<div class="mdc-layout-grid__cell" id="map-col3">
 				<iframe title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"
-					frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+					class="map-frame" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					
 			</div>
 			<h2 class="mdc-typography--subheading2">Download the data</h2>

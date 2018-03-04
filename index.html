@@ -12,6 +12,7 @@
 
 		<title>Pontiac Parks Accessibility Project</title>
 		<link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -31,13 +32,6 @@
 
 			/* Material Blue Grey 900 */
 			--mdc-theme-secondary: #263238;
-
-			/* TODO: Fix centering on mobile.
-			/* Center everything */
-			/* position: absolute;
-			top: 0px;
-			left: 50%;
-			margin-left: -500px; */
 		}
 
 		/* TODO: Set link text color properly */
@@ -46,7 +40,7 @@
 		}
 
 		/* Formatting on mobile */
-		@media (max-width: 839px) {
+		@media (max-width: 768px) {
 
 			.title-font span {
 				display: none;
@@ -66,7 +60,7 @@
 		}
 
 		/* Formatting on desktop */
-		@media (min-width: 840px) {
+		@media (min-width: 769px) {
 
 			.title-font span {
 				display: none;
@@ -76,8 +70,23 @@
 				content: "Pontiac Parks Accessibility Project";
 			}
 
+			.slides-frame {
+				width: 100%;
+			}
+
 			.map-frame {
-				width: 75%;
+				width: 100%;
+			}
+		}
+
+		/* Formatting for wide screens */
+		@media (min-width: 1280px) {
+			.slides-frame {
+				width: 600px;
+			}
+
+			.map-frame {
+				width: 600px;
 			}
 		}
 	</style>
@@ -105,90 +114,93 @@
 			<div class="mdc-toolbar-fixed-adjust">
 				<div class="mdc-layout-grid">
 					<div class="mdc-layout-grid__inner">
-						<div class="mdc-layout-grid__cell" id="map-col1">
-							<h2 class="mdc-typography--subheading2">About this project</h2>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+							<h2 class="mdc-typography--display1">About this project</h2>
 							<div class="mdc-typography--body1">
 								<span>This project supplements research performed in the summer of 2017 as part of Health Science 405: Community Engaged Research Training, a course offered through the </span>
 								<a class="accent-link" href="https://oakland.edu/shs" target="_blank" rel="noopener noreferrer">School of Health Sciences at Oakland University.</a>
 							</div>
-								<p class="mdc-typography--body1">
-									<div>The full report will be available in March from the Kresge Library.</div>
-									<!--<a style="margin: 20px;" class="mdc-button mdc-button--primary mdc-button--raised">View Report</a>-->
-								</p>
-							<h2 class="mdc-typography--subheading2">Equipment used</h2>
+							<p class="mdc-typography--body1">
+								<div>The full report will be available in March from the Kresge Library.</div>
+								<!--<a style="margin: 20px;" class="mdc-button mdc-button--primary mdc-button--raised">View Report</a>-->
+							</p>
+						</div>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+							<h2 class="mdc-typography--display1">Download the presentation</h2>
+							<h3 class="mdc-typography--headline">Slideshow</h3>
+							<table>
+								<tr>
+									<td>PDF</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-slides.pdf">file_download</a>
+									</td>
+								</tr>
+								<tr>
+									<td>PowerPoint</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-slides.pptx">file_download</a>
+									</td>
+								</tr>
+							</table>
+							<h3 class="mdc-typography--headline">Poster</h3>
+							<table>
+								<tr>
+									<td>PDF</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-poster.pdf">file_download</a>
+									</td>
+								</tr>
+								<tr>
+									<td>PowerPoint</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-poster.pptx">file_download</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+							<iframe title="Project Slideshow" src="https://docs.google.com/presentation/d/e/2PACX-1vRijw28owe4FAuMgqr2EP7LwBLW7f9lliQ0ID18KHS7GBD1Cv8gCcVTr4WMJSw4TxeaDpGIqYbQDDhv/embed"
+							class="slides-frame" frameborder="0" width="480" height="375" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+						</div>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+							<h2 class="mdc-typography--display1">Download the data</h2>
+							<table>
+								<tr>
+									<td>
+										<i class="material-icons" role="presentation">cloud</i>
+									</td>
+									<td>Online KMZ (1 KB)</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-online.kmz">file_download</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="material-icons" role="presentation">map</i>
+									</td>
+									<td>Offline KMZ (521 MB)</td>
+									<td>
+										<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-offline.kmz">file_download</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+							<iframe title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"
+								class="map-frame" frameborder="0" width="600" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+							</div>
+						</div>
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+							<h2 class="mdc-typography--headline">Resources</h2>
 							<div class="mdc-typography--body1">
 								<span>Images and geolocation data for this project were collected with a </span>
 								<a class="accent-link" href="https://buy.garmin.com/en-US/US/p/113548" target="_blank" rel="noopener noreferrer">Garmin Oregon 650t</a>
 								<span> and organized using </span>
 								<a class="accent-link" href="https://google.com/earth/desktop" target="_blank" rel="noopener noreferrer">Google Earth Pro 7.3.</a>
 							</div>
-							<div>
-							</div>
-							<div>
-							</div>
-						</div>
-						<div class="mdc-layout-grid__cell" id="map-col2">
-							<iframe title="Project Slideshow" src="https://docs.google.com/presentation/d/e/2PACX-1vRijw28owe4FAuMgqr2EP7LwBLW7f9lliQ0ID18KHS7GBD1Cv8gCcVTr4WMJSw4TxeaDpGIqYbQDDhv/embed"
-							class="slides-frame" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
 					</div>
 				</div>
-				<div class="mdc-layout-grid__cell" id="map-col3">
-					<iframe title="Map of Collected Park Data" src="https://www.google.com/maps/d/u/0/embed?mid=12uBsKAtBA45ZFuOKoFkhu_-4Xp8"
-						class="map-frame" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</div>
-				<h2>Download the presentation</h2>
-				<h3>Slideshow</h3>
-				<table>
-					<tr>
-						<td>PDF</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-slides.pdf">file_download</a>
-						</td>
-					</tr>
-					<tr>
-						<td>PowerPoint</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-slides.pptx">file_download</a>
-						</td>
-					</tr>
-				</table>
-				<h3>Poster</h3>
-				<table>
-					<tr>
-						<td>PDF</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-poster.pdf">file_download</a>
-						</td>
-					</tr>
-					<tr>
-						<td>PowerPoint</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-poster.pptx">file_download</a>
-						</td>
-					</tr>
-				</table>
-				<h2>Download the data</h2>
-				<table>
-					<tr>
-						<td>
-							<i class="material-icons" role="presentation">cloud</i>
-						</td>
-						<td>Online KMZ (1 KB)</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-online.kmz">file_download</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<i class="material-icons" role="presentation">map</i>
-						</td>
-						<td>Offline KMZ (521 MB)</td>
-						<td>
-							<a class="material-icons mdc-button mdc-button--primary" href="files/pontiacparks-offline.kmz">file_download</a>
-						</td>
-					</tr>
-				</table>
 			</div>
 		</main>
 	</body>
